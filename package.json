@@ -1,0 +1,19 @@
+{
+  "name": "snapshot-back-end",
+  "version": "1.0.0",
+  "description": "Instagram Clone Back-End",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliversablove/Snapshot-Back-End.git"
+  },
+  "author": "Oliver Sablove <oliversablove.github.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oliversablove/Snapshot-Back-End/issues"
+  },
+  "homepage": "https://github.com/oliversablove/Snapshot-Back-End#readme"
+}
