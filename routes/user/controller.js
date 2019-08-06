@@ -11,7 +11,7 @@ module.exports = {
       }
 
       if (!user) {
-        res.send({ auth: false, msg: 'Account Does Not Exist' })
+        res.send({ auth: false, mailError: true, msg: 'Account Does Not Exist' })
         return
       }
       // broken somewhere in next two lines: connot read property 'comparePassword' of null -> user is null
@@ -24,7 +24,7 @@ module.exports = {
           res.status(200).send({ auth: true, token })
           return
         } else {
-          res.send({ auth: false, msg: 'Incorrect Password' })
+          res.send({ auth: false, passError: true, msg: 'Incorrect Password' })
         }
       })
     })
