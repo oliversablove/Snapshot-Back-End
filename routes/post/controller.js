@@ -12,7 +12,7 @@ module.exports = {
           res.send({ success: false, msg: "User Not Found"})
           return
         }
-        
+
       let newpost = new model({
         user_id: user_id,
         display_name: response.firstname + ' ' + response.lastname,
@@ -28,5 +28,14 @@ module.exports = {
           if (err) res.send({ success: false, error: err })
         })
     })
+  },
+  getposts: (req, res) => {
+    model.find()
+      .then(response => {
+        res.send(response)
+      })
+      .catch(err => {
+        console.error(err)
+      })
   }
 }
