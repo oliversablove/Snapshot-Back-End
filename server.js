@@ -5,6 +5,7 @@ const config = require('./config')
 const db = require('./config/database')
 
 const userRouter = require('./routes/user')
+const postRouter = require('./routes/post')
 
 const cors = require('cors')
 
@@ -22,5 +23,6 @@ app.use(cors())
 
 // Routes
 app.use('/user', userRouter)
+app.use('/post', postRouter)
 
 app.listen(config.port, console.log('Server has started on port http://localhost:%s', config.port))
